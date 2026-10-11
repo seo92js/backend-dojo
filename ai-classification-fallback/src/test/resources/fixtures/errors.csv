@@ -1,0 +1,51 @@
+id,message,truth
+1,Database connection refused sample 1,DATABASE
+2,Database connection refused sample 2,DATABASE
+3,Database connection refused sample 3,DATABASE
+4,Database connection refused sample 4,DATABASE
+5,Database connection refused sample 5,DATABASE
+6,Connection reset by peer sample 1,NETWORK
+7,Connection reset by peer sample 2,NETWORK
+8,Connection reset by peer sample 3,NETWORK
+9,Connection reset by peer sample 4,NETWORK
+10,Connection reset by peer sample 5,NETWORK
+11,Expired access token sample 1,AUTHENTICATION
+12,Expired access token sample 2,AUTHENTICATION
+13,Expired access token sample 3,AUTHENTICATION
+14,Expired access token sample 4,AUTHENTICATION
+15,Expired access token sample 5,AUTHENTICATION
+16,Permission denied for resource sample 1,AUTHORIZATION
+17,Permission denied for resource sample 2,AUTHORIZATION
+18,Permission denied for resource sample 3,AUTHORIZATION
+19,Permission denied for resource sample 4,AUTHORIZATION
+20,Permission denied for resource sample 5,AUTHORIZATION
+21,Required request field missing sample 1,VALIDATION
+22,Required request field missing sample 2,VALIDATION
+23,Required request field missing sample 3,VALIDATION
+24,Required request field missing sample 4,VALIDATION
+25,Required request field missing sample 5,VALIDATION
+26,Upstream request timed out sample 1,TIMEOUT
+27,Upstream request timed out sample 2,TIMEOUT
+28,Upstream request timed out sample 3,TIMEOUT
+29,Upstream request timed out sample 4,TIMEOUT
+30,Upstream request timed out sample 5,TIMEOUT
+31,Too many requests sample 1,RATE_LIMIT
+32,Too many requests sample 2,RATE_LIMIT
+33,Too many requests sample 3,RATE_LIMIT
+34,Too many requests sample 4,RATE_LIMIT
+35,Too many requests sample 5,RATE_LIMIT
+36,Requested resource missing sample 1,NOT_FOUND
+37,Requested resource missing sample 2,NOT_FOUND
+38,Requested resource missing sample 3,NOT_FOUND
+39,Requested resource missing sample 4,NOT_FOUND
+40,Requested resource missing sample 5,NOT_FOUND
+41,Connection pool exhausted sample 1,RESOURCE_EXHAUSTED
+42,Connection pool exhausted sample 2,RESOURCE_EXHAUSTED
+43,Connection pool exhausted sample 3,RESOURCE_EXHAUSTED
+44,Connection pool exhausted sample 4,RESOURCE_EXHAUSTED
+45,Connection pool exhausted sample 5,RESOURCE_EXHAUSTED
+46,Unexpected unclassified exception sample 1,UNKNOWN
+47,Unexpected unclassified exception sample 2,UNKNOWN
+48,Unexpected unclassified exception sample 3,UNKNOWN
+49,Unexpected unclassified exception sample 4,UNKNOWN
+50,Unexpected unclassified exception sample 5,UNKNOWN

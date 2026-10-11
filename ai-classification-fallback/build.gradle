@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'dev.dojo'
+version = '0.1.0'
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.boot:spring-boot-dependencies:4.1.1'
+        mavenBom 'org.springframework.ai:spring-ai-bom:2.0.1'
+    }
+}
+
+repositories { mavenCentral() }
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile).configureEach { options.release = 17 }
+
+tasks.named('test') {
+    useJUnitPlatform { excludeTags 'experiment' }
+}
+
+tasks.register('experiments', Test) {
+    description = 'Calls the real AI model and compares classification thresholds'
+    group = 'verification'
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+    useJUnitPlatform { includeTags 'experiment' }
+    outputs.upToDateWhen { false }
+    doFirst {
+        if (!System.getenv('OPENAI_API_KEY')?.trim()) {
+            throw new GradleException('OPENAI_API_KEY 환경변수를 설정한 뒤 실행하세요.')
+        }
+    }
+}
